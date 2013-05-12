@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 
 from gi.repository import Gtk
-import os
 import sys
+
+try:
+    import winsound
+except ImportError:
+    import os
+
 
 class Tuner(Gtk.Window):
 
@@ -49,24 +54,45 @@ class Tuner(Gtk.Window):
         if(button.get_label() == "E Low"):
             # Play E
             if(sys.platform.startswith('win')):
-                winsound.beep(82.4, 7)
+                winsound.beep(82.4  , 10)
+            elif(os.name == "posix"):
+                os.system('beep -f 82.4 -l 10000')
+            print button.get_label()
+
         elif (button.get_label() == "A"):
             if(sys.platform.startswith('win')):
-                winsound.beep(110, 7)
+                winsound.beep(110, 10)
+            elif(os.name == "posix"):
+                os.system('beep -f 110 -l 10000')
+            print button.get_label()
+
         elif (button.get_label() == "D"):
             if(sys.platform.startswith('win')):
-                winsound.beep(146.8, 7)
+                winsound.beep(146.8, 10)
+            elif(os.name == "posix"):
+                os.system('beep -f 146.8 -l 10000')
+            print button.get_label()
+
         elif (button.get_label() == "G"):
             if(sys.platform.startswith('win')):
-                winsound.beep(196, 7)
+                winsound.beep(196, 10)
+            elif(os.name == "posix"):
+                os.system('beep -f 196 -l 10000')
+            print button.get_label()
+
         elif (button.get_label() == "B"):
             if(sys.platform.startswith('win')):
-                winsound.beep(246.9, 7)
+                winsound.beep(246.9, 10)
+            elif(os.name == "posix"):
+                os.system('beep -f 246.9 -l 10000')
+            print button.get_label()
+
         elif (button.get_label() == "E High"):
             if(sys.platform.startswith('win')):
-                winsound.beep(329.6, 7)
-
-
+                winsound.beep(329.6, 10)
+            elif(os.name == "posix"):
+                os.system('beep -f 329.6 -l 10000')
+            print button.get_label()
 
 
 
@@ -76,3 +102,4 @@ if __name__  == "__main__":
     win.connect("delete-event", Gtk.main_quit)
     win.show_all()
     Gtk.main()
+    print "GoodBye!"

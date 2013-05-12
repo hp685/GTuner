@@ -1,0 +1,9 @@
+A Guitar Tuner for Unix(posix) platform.
+
+Requirements:
+
+Debian:
+Python GTK : sudo apt-get install python-tk
+beep:  sudo apt-get install beep
+
+You may find similar packages for other unix distributions
