@@ -2,6 +2,9 @@ A Guitar Tuner for Unix(posix) platform.
 
 Requirements:
 
+Comment out blacklist pcspkr line
+from /etc/modeprobe.d/blacklist.conf
+
 Debian:
 Python GTK : sudo apt-get install python-tk
 beep:  sudo apt-get install beep
