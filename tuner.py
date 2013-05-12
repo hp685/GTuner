@@ -98,8 +98,9 @@ class Tuner(Gtk.Window):
 
 
 if __name__  == "__main__":
+    print "Beeps are 10s long"
     win = Tuner()
     win.connect("delete-event", Gtk.main_quit)
     win.show_all()
     Gtk.main()
-    print "GoodBye!"
+    print "Happy Strumming!"
