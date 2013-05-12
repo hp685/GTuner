@@ -7,3 +7,5 @@ Python GTK : sudo apt-get install python-tk
 beep:  sudo apt-get install beep
 
 You may find similar packages for other unix distributions
+
+GTK3+/PyGObject for windows is still under development
